@@ -33,8 +33,8 @@ function generateFizzBuzz(fizz, buzz, stop){
         else if (number % buzz == 0) {
              resultsArray.push('Buzz');
         }
-         else if (number % buzz == 0) {
-             resultsArray.push('Buzz');
+         else if (number % fizz == 0) {
+             resultsArray.push('Fizz');
         }
         else{
             resultsArray.push(number);
@@ -48,16 +48,16 @@ function displayFizzBuzz(numbers) {
     let results = "";
 
     for (let index = 0; index < numbers.length; index = index + 1) {
-      let currentNumber = numbers[index];
-  
-      if (currentNumber % 2 == 0) {
-        results += `<tr><td>${currentNumber}</td></tr>`;
-      } else {
-        results += `<tr><td>${currentNumber}</td></tr>`;
-      }
+        let currentNumber = numbers[index];
+
+        if (currentNumber % 2 == 0) {
+            results += `<tr><td>${currentNumber}</td></tr>`;
+        } else {
+            results += `<tr><td>${currentNumber}</td></tr>`;
+        }
     }
 
-    let tableBody = document.getElementById('results');
+    let tableBody = document.getElementById("results");
     tableBody.innerHTML = results;
 
 }
